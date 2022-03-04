@@ -6,7 +6,7 @@
 /*   By: jhermon- <jhermon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 13:51:28 by jhermon-          #+#    #+#             */
-/*   Updated: 2022/03/04 14:59:16 by jhermon-         ###   ########.fr       */
+/*   Updated: 2022/03/04 15:01:52 by jhermon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,6 @@ void	ft_temp(t_stacks *liste, int *temp)
 		current = current->suivant;
 	}
 	current->nombre = temp[i];
-	free (temp);
 }
 
 // rra reverse - rotate A - Shift down all elements 
