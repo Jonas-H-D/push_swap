@@ -6,7 +6,7 @@
 /*   By: jhermon- <jhermon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 13:51:28 by jhermon-          #+#    #+#             */
-/*   Updated: 2022/03/02 13:13:27 by jhermon-         ###   ########.fr       */
+/*   Updated: 2022/03/04 11:58:35 by jhermon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,22 @@ int	ft_tab_lena(t_stacks *liste, t_data *data)
 	return (i);
 }
 
+void	ft_temp(t_stacks *liste, int *temp)
+{
+	t_Element	*current;
+	int			i;
+
+	current = liste->premiera->premier;
+	i = 0;
+	while (current->suivant != NULL)
+	{
+		current->nombre = temp[i++];
+		current = current->suivant;
+	}
+	current->nombre = temp[i];
+	free (temp);
+}
+
 // rra reverse - rotate A - Shift down all elements 
 //of stack a by 1 The last element becomes the first one.
 void	ft_rra(t_stacks *liste, t_data *data)
@@ -92,15 +108,7 @@ void	ft_rra(t_stacks *liste, t_data *data)
 			temp[i++] = current->nombre;
 			current = current->suivant;
 		}
-		current = liste->premiera->premier;
-		i = 0;
-		while (current->suivant != NULL)
-		{
-			current->nombre = temp[i++];
-			current = current->suivant;
-		}
-		current->nombre = temp[i];
-		free (temp);
+		ft_temp(liste, temp);
 		printf("rra\n");
 	}
 }

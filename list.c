@@ -6,7 +6,7 @@
 /*   By: jhermon- <jhermon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 13:50:17 by jhermon-          #+#    #+#             */
-/*   Updated: 2022/03/02 13:48:28 by jhermon-         ###   ########.fr       */
+/*   Updated: 2022/03/04 12:02:57 by jhermon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,5 @@ void	afficherliste(t_Liste *liste)
 		printf("%d ->", actuel->nombre);
 		actuel = actuel->suivant;
 	}
-	free(actuel);
 	printf("NULL\n");
 }

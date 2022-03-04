@@ -6,7 +6,7 @@
 /*   By: jhermon- <jhermon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 13:49:07 by jhermon-          #+#    #+#             */
-/*   Updated: 2022/03/02 13:51:19 by jhermon-         ###   ########.fr       */
+/*   Updated: 2022/03/04 12:03:13 by jhermon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,6 @@ void	ft_check_args(char **argv, t_stacks *stacks, t_data *data)
 			insertion(stacks->premiera, argv[i]);
 		i--;
 	}
-	free (args);
 }
 
 int	ft_isuniq(t_Liste *liste, int nbr)

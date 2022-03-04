@@ -6,7 +6,7 @@
 /*   By: jhermon- <jhermon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 13:51:24 by jhermon-          #+#    #+#             */
-/*   Updated: 2022/03/02 13:12:44 by jhermon-         ###   ########.fr       */
+/*   Updated: 2022/03/04 12:03:08 by jhermon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,21 @@ int	ft_tab_lenb(t_stacks *liste, t_data *data)
 	return (i);
 }
 
+void	ft_tempb(t_stacks *liste, int *temp)
+{
+	t_Element	*current;
+	int			i;
+
+	current = liste->premierb->premier;
+	i = 0;
+	while (current->suivant != NULL)
+	{
+		current->nombre = temp[i++];
+		current = current->suivant;
+	}
+	current->nombre = temp[i];
+}
+
 // rrb reverse - rotate B - Shift down all 
 //elements of stack b by 1 The last element becomes the first one.
 void	ft_rrb(t_stacks *liste, t_data *data)
@@ -89,15 +104,7 @@ void	ft_rrb(t_stacks *liste, t_data *data)
 			temp[i++] = current->nombre;
 			current = current->suivant;
 		}
-		current = liste->premierb->premier;
-		i = 0;
-		while (current->suivant != NULL)
-		{
-			current->nombre = temp[i++];
-			current = current->suivant;
-		}
-		current->nombre = temp[i];
-		free (temp);
+		ft_tempb(liste, temp);
 		printf("rrb\n");
 	}
 }
