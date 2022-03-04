@@ -6,7 +6,7 @@
 /*   By: jhermon- <jhermon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 13:51:24 by jhermon-          #+#    #+#             */
-/*   Updated: 2022/03/04 12:03:08 by jhermon-         ###   ########.fr       */
+/*   Updated: 2022/03/04 14:58:33 by jhermon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_sb(t_stacks *liste)
 			toswap1 = stack->suivant->nombre;
 			stack->suivant->nombre = stack->nombre;
 			stack->nombre = toswap1;
-			printf("sb\n");
+			write(1, "sb\n", 3);
 		}
 	}
 }
@@ -50,7 +50,7 @@ void	ft_rb(t_stacks *liste)
 			temp = temp->suivant;
 		}
 		current->nombre = top;
-		printf("rb\n");
+		write(1, "rb\n", 3);
 	}
 }
 
@@ -105,6 +105,6 @@ void	ft_rrb(t_stacks *liste, t_data *data)
 			current = current->suivant;
 		}
 		ft_tempb(liste, temp);
-		printf("rrb\n");
+		write(1, "rrb\n", 4);
 	}
 }

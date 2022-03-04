@@ -6,7 +6,7 @@
 /*   By: jhermon- <jhermon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 13:51:05 by jhermon-          #+#    #+#             */
-/*   Updated: 2022/02/28 15:11:02 by jhermon-         ###   ########.fr       */
+/*   Updated: 2022/03/04 14:57:45 by jhermon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_pa(t_stacks *liste)
 	{
 		push_insertion(stacka, stackb->premier->nombre);
 		suppression(stackb);
-		printf("pa\n");
+		write(1, "pa\n", 3);
 	}
 }
 
@@ -40,6 +40,6 @@ void	ft_pb(t_stacks *liste)
 	{
 		push_insertion(stackb, stacka->premier->nombre);
 		suppression(stacka);
-		printf("pb\n");
+		write(1, "pb\n", 3);
 	}
 }

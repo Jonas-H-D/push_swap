@@ -6,7 +6,7 @@
 /*   By: jhermon- <jhermon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 13:50:14 by jhermon-          #+#    #+#             */
-/*   Updated: 2022/03/01 20:27:53 by jhermon-         ###   ########.fr       */
+/*   Updated: 2022/03/04 14:59:42 by jhermon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_init_bitwise(t_data *data, t_stacks *liste)
 
 	size = data->arg_size;
 	if (!liste)
-		printf("no liste");
+		ft_error();
 	max_num = size - 1;
 	max_bits = 0;
 	data->max_num = max_num;

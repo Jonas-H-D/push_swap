@@ -6,13 +6,13 @@
 /*   By: jhermon- <jhermon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 15:27:27 by jhermon-          #+#    #+#             */
-/*   Updated: 2022/03/02 11:48:55 by jhermon-         ###   ########.fr       */
+/*   Updated: 2022/03/04 14:59:56 by jhermon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_printtab(char	**tab)
+/*void	ft_printtab(char	**tab)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ void	ft_printtab(char	**tab)
 		printf("%s\n", tab[i]);
 		i++;
 	}
-}
+}*/
 
 void	ft_error(void)
 {

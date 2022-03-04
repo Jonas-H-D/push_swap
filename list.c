@@ -6,7 +6,7 @@
 /*   By: jhermon- <jhermon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 13:50:17 by jhermon-          #+#    #+#             */
-/*   Updated: 2022/03/04 12:02:57 by jhermon-         ###   ########.fr       */
+/*   Updated: 2022/03/04 14:57:09 by jhermon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	suppression(t_Liste *liste)
 	}
 }
 
-void	afficherliste(t_Liste *liste)
+/*void	afficherliste(t_Liste *liste)
 {
 	t_Element	*actuel;
 
@@ -79,4 +79,4 @@ void	afficherliste(t_Liste *liste)
 		actuel = actuel->suivant;
 	}
 	printf("NULL\n");
-}
+}*/
